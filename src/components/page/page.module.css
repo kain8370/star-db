@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1130px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .container *:first-child {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
