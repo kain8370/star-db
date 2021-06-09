@@ -1,5 +1,4 @@
 import React from 'react';
-import SwapiService from '../../services/swapi-service';
 import Spinner from '../spinner/spinner';
 
 import itemListStyle from './item-list.module.css';
@@ -17,7 +16,7 @@ class ItemList extends React.Component {
   renderItems(items) {
     return items.map(item => {
       return (
-        <a href="#" className="list-group-item list-group-item-action" key={item.id} onClick={() => this.props.onPersonSelected(item.id)}>{item.name}</a>
+        <a href="#" className="list-group-item list-group-item-action" key={item.id} onClick={() => this.props.onItemSelected(item.id)}>{this.props.renderItem(item)}</a>
       )
     })
   }
